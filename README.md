@@ -1,2 +1,2 @@
 # Automatically-water-system
-Code - fun - useful
+Simple - Easy - Useful
