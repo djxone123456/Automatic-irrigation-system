@@ -10,9 +10,9 @@ bool getTimeWatering()
   {
     NTPch.printDateTime(dateTime);
 
-    byte actualHour = dateTime.hour;      // Gio
-    byte actualMinute = dateTime.minute;  // Phut
-    byte actualSecond = dateTime.second;  // Giay
+    byte actualHour = dateTime.hour;      // Hour
+    byte actualMinute = dateTime.minute;  // Minute
+    byte actualSecond = dateTime.second;  // Second
 
     if((actualHour >= startWaterTime && actualHour <= endWaterTime) && ((actualHour % timeBTW == 0) && (actualMinute == 0) && (actualSecond <= 25)))
       return true;
