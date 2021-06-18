@@ -69,13 +69,13 @@ void sendUptime()
 {   
   if(processing) return;
   
-  if (WiFi.status() != WL_CONNECTED)
+  if (WiFi.status() != WL_CONNECTED) //If no wifi connection, deep sleep on timeSleep seconds.
   {
     ESP.deepSleep(timeSleep * (long)1e6);
   }
     
-  UpdateDHT();
-  if(getTimeWatering()) AcessWater();
+  UpdateDHT(); //Reads information on DHT sensor and sends to Blynk
+  if(getTimeWatering()) AcessWater();// Water
 }
 
 void loop() {
