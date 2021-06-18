@@ -22,7 +22,7 @@ void update_error(int err) {
   Serial.printf("CALLBACK:  HTTP update fatal error code %d\n", err);
 }
 
-bool NewVerFound()
+bool NewVerFound() // check new firmware is available or not
 {
   WiFiClient client;
   HTTPClient http;
