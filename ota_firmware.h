@@ -26,7 +26,7 @@ bool NewVerFound() // check new firmware is available or not
 {
   WiFiClient client;
   HTTPClient http;
-  http.begin(client, "http://waterautomatic.000webhostapp.com/firmware_ver"); //HTTP URL for hosted server(local server)
+  http.begin(client, "http://waterautomatic.000webhostapp.com/firmware_ver"); //HTTP URL for getting firmware version
   int httpCode = http.GET();
   if(httpCode > 0) {
       if(httpCode == HTTP_CODE_OK) {
