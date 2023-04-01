@@ -1,8 +1,7 @@
 // Only use for non-commercial purposes
 /** Warning: Test this library carefully before uploading to OTA website if you change anything in here**/
 ////////////////Firmware link///////////////
-const char *website = "http://waterautomatic.000webhostapp.com/firmware.bin";
-///////////////////////////////////
+const char *website = "http://waterautomatic.000webhostapp.com/firmware.bin";///////////////////////////////////
 
 void update_started() {
   Serial.println("CALLBACK:  HTTP update process started");
@@ -26,7 +25,7 @@ bool NewVerFound() // check new firmware is available or not
 {
   WiFiClient client;
   HTTPClient http;
-  http.begin(client, "http://waterautomatic.000webhostapp.com/firmware_ver"); //HTTP URL for getting firmware version
+  http.begin(client, "http://waterautomatic.000webhostapp.com/firmware_ver"); //HTTP URL for hosted server(local server)
   int httpCode = http.GET();
   if(httpCode > 0) {
       if(httpCode == HTTP_CODE_OK) {

@@ -145,7 +145,7 @@ BLYNK_WRITE(V3)
     terminal.print("Upload date: ");
     terminal.println(dateup);
     terminal.println("Processor: NodeMCU.");
-    terminal.print("(c) 2021 runandgo.xyz\n");
+    terminal.print("(c) 2023 runandgo.xyz\n");
     terminal.flush();
   }
   
